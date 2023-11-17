@@ -7,7 +7,11 @@
 
 import SwiftUI
 
+
+
+
 struct ContentView: View {
+    @State private var selectedTab:Tab = .house
     
     var body: some View {
         VStack(alignment:.leading) {
@@ -99,39 +103,39 @@ struct ContentView: View {
                 VStack(alignment: .leading, spacing: 8){
                     Image("sun")
                         .frame(width: 58,height:73)
-                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .background(Color("GrayGround"))
                         .clipShape(Circle())
                     Text("Covid 19")
                         .font(Font.custom("Poppins", size: 15))
-                        .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+                        .foregroundColor(Color("BlueIcon"))
                     
                 }
                 VStack(alignment: .center, spacing: 8){
                     Image("profile-add")
                         .frame(width: 58,height:73)
-                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .background(Color("GrayGround"))
                         .clipShape(Circle())
                     Text("Doctor")
                         .font(Font.custom("Poppins", size: 15))
-                        .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+                        .foregroundColor(Color("BlueIcon"))
                 }
                 VStack(alignment: .center, spacing: 8){
                     Image("link")
                         .frame(width: 58,height:73)
-                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .background(Color("GrayGround"))
                         .clipShape(Circle())
                     Text("Medicine")
                         .font(Font.custom("Poppins", size: 15))
-                        .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+                        .foregroundColor(Color("BlueIcon"))
                 }
                 VStack(alignment: .center, spacing: 8){
                     Image("hospital")
                         .frame(width: 58,height:73)
-                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .background(Color("GrayGround"))
                         .clipShape(Circle())
                     Text("Hospital")
                         .font(Font.custom("Poppins", size: 15))
-                        .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+                        .foregroundColor(Color("BlueIcon"))
                 }
                 
             }
@@ -144,72 +148,72 @@ struct ContentView: View {
                         Font.custom("Poppins-Bold", size: 16)
                             .weight(.semibold)
                     )
-                .foregroundColor(Color(red: 0.05, green: 0.11, blue: 0.2))
+                    .foregroundColor(Color(red: 0.05, green: 0.11, blue: 0.2))
                 Spacer()
             }
         }.padding(.horizontal)
         ScrollView{
-        VStack(alignment: .leading, spacing: 16) {
-            HStack(){
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 58.44,height: 73.08)
-                        .background(
-                            Image("doc1")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 58,height:73)
-                                .foregroundColor(.white)
-                                .background(Color.white)
-                                .clipShape(Circle())
-                        )
-                    
-                }.frame(width: 48,height: 48)
-                    .padding(.horizontal)
-                VStack(alignment:.leading){
-                    Text("Dr. Joseph Brostito")
-                        .font(
-                            Font.custom("Poppins", size: 16)
-                                .weight(.bold)
-                            
-                        )
-                        .foregroundColor(Color(red: 0.05, green: 0.11, blue: 0.2))
-                    Text("Dental Specialist")
-                        .font(Font.custom("Poppins", size: 14))
+            VStack(alignment: .leading, spacing: 16) {
+                HStack(){
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(width: 58.44,height: 73.08)
+                            .background(
+                                Image("doc1")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 58,height:73)
+                                    .foregroundColor(.white)
+                                    .background(Color.white)
+                                    .clipShape(Circle())
+                            )
+                        
+                    }.frame(width: 48,height: 48)
+                        .padding(.horizontal)
+                    VStack(alignment:.leading){
+                        Text("Dr. Joseph Brostito")
+                            .font(
+                                Font.custom("Poppins", size: 16)
+                                    .weight(.bold)
+                                
+                            )
+                            .foregroundColor(Color(red: 0.05, green: 0.11, blue: 0.2))
+                        Text("Dental Specialist")
+                            .font(Font.custom("Poppins", size: 14))
+                            .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+                    }
+                    Spacer()
+                    Image("location")
+                        .frame(width: 16, height: 16)
+                    Text("1.2 KM")
+                        .font(Font.custom("Poppins-Regular", size: 14))
                         .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
                 }
-                Spacer()
-                Image("location")
-                    .frame(width: 16, height: 16)
-                Text("1.2 KM")
-                  .font(Font.custom("Poppins-Regular", size: 14))
-                  .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+                Divider()
+                    .background(.white)
+                HStack(alignment:.center,spacing: 8){
+                    Image(systemName: "clock")
+                        .frame(width: 16, height: 16)
+                        .foregroundColor(Color(red: 1, green: 0.69, blue: 0.32))
+                    
+                    Text("4,8 (120 Reviews)")
+                        .font(Font.custom("Poppins-Regular", size: 12))
+                        .foregroundColor(Color(red: 1, green: 0.69, blue: 0.32))
+                    Spacer()
+                    Image(systemName: "clock")
+                        .frame(width: 16, height: 16)
+                        .foregroundColor(Color(red: 0.28, green: 0.58, blue: 1))
+                    Text("Open at 17.00")
+                        .font(Font.custom("Poppins", size: 12))
+                        .foregroundColor(Color(red: 0.28, green: 0.58, blue: 1))
+                }
             }
-            Divider()
-                .background(.white)
-            HStack(alignment:.center,spacing: 8){
-                Image(systemName: "calendar")
-                    .frame(width: 16, height: 16)
-                    .foregroundColor(Color(red: 1, green: 0.69, blue: 0.32))
-
-                Text("4,8 (120 Reviews)")
-                  .font(Font.custom("Poppins-Regular", size: 12))
-                  .foregroundColor(Color(red: 1, green: 0.69, blue: 0.32))
-                Spacer()
-                Image(systemName: "clock")
-                    .frame(width: 16, height: 16)
-                    .foregroundColor(Color(red: 0.28, green: 0.58, blue: 1))
-                Text("Open at 17.00")
-                  .font(Font.custom("Poppins", size: 12))
-                  .foregroundColor(Color(red: 0.28, green: 0.58, blue: 1))
-            }
-        }
-        .padding(20)
-        .frame(width: 327, alignment: .leading)
-        .background(.white)
-        .shadow(color: Color(red: 0.35, green: 0.46, blue: 0.65).opacity(0.04), radius: 10, x: 2, y: 12)
-        .cornerRadius(12)
+            .padding(20)
+            .frame(width: 327, alignment: .leading)
+            .background(.white)
+            .shadow(color: Color(red: 0.35, green: 0.46, blue: 0.65).opacity(0.04), radius: 10, x: 2, y: 12)
+            .cornerRadius(12)
             VStack(alignment: .leading, spacing: 16) {
                 HStack(){
                     ZStack {
@@ -244,26 +248,26 @@ struct ContentView: View {
                     Image("location")
                         .frame(width: 16, height: 16)
                     Text("1.2 KM")
-                      .font(Font.custom("Poppins-Regular", size: 14))
-                      .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+                        .font(Font.custom("Poppins-Regular", size: 14))
+                        .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
                 }
                 Divider()
                     .background(.white)
                 HStack(alignment:.center,spacing: 8){
-                    Image(systemName: "calendar")
+                    Image(systemName: "clock")
                         .frame(width: 16, height: 16)
                         .foregroundColor(Color(red: 1, green: 0.69, blue: 0.32))
-
+                    
                     Text("4,8 (120 Reviews)")
-                      .font(Font.custom("Poppins-Regular", size: 12))
-                      .foregroundColor(Color(red: 1, green: 0.69, blue: 0.32))
+                        .font(Font.custom("Poppins-Regular", size: 12))
+                        .foregroundColor(Color(red: 1, green: 0.69, blue: 0.32))
                     Spacer()
                     Image(systemName: "clock")
                         .frame(width: 16, height: 16)
                         .foregroundColor(Color(red: 0.28, green: 0.58, blue: 1))
                     Text("Open at 17.00")
-                      .font(Font.custom("Poppins", size: 12))
-                      .foregroundColor(Color(red: 0.28, green: 0.58, blue: 1))
+                        .font(Font.custom("Poppins", size: 12))
+                        .foregroundColor(Color(red: 0.28, green: 0.58, blue: 1))
                 }
             }
             .padding(20)
@@ -271,10 +275,64 @@ struct ContentView: View {
             .background(.white)
             .shadow(color: Color(red: 0.35, green: 0.46, blue: 0.65).opacity(0.04), radius: 10, x: 2, y: 12)
             .cornerRadius(12)
-    }
-        
+
         }
-    }
+        //HStack{
+          //  SwiftUIView(selectedTab:$selectedTab)
+        //}
+        HStack(alignment: .center, spacing: 12){
+                    Button{
+                        //
+                    }
+                label: {
+                    Image(systemName: "house")
+                        .foregroundColor(Color(red: 0.39, green: 0.71, blue: 1))
+                    Text("Home")
+                        .font(Font.custom("Poppins", size: 14))
+                }.padding(12)
+                        .background(Color(red: 0.39, green: 0.71, blue: 1).opacity(0.1))
+
+                        .cornerRadius(12)
+                    Spacer()
+                    Button{
+                        //
+                    }
+                label: {
+                    Image(systemName: "calendar")
+                        .foregroundColor(Color(red: 0.39, green: 0.71, blue: 1))
+
+                }
+            Spacer()
+
+                    Button{
+                        //
+                    }
+                label: {
+                    Image(systemName: "message")
+                        .foregroundColor(Color(red: 0.39, green: 0.71, blue: 1))
+
+                }
+            Spacer()
+
+                    Button{
+                        //
+                    }
+                label: {
+                    Image(systemName: "person.crop.circle")
+                        .foregroundColor(Color(red: 0.39, green: 0.71, blue: 1))
+
+                }
+                    
+                }.padding(.horizontal, 24)
+                    .padding(.vertical, 16)
+                    .frame(width: 375, alignment: .center)
+                    .background(.white)
+            
+                }
+            }
+
+    
+
 
 #Preview {
     ContentView()
