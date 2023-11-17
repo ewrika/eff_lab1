@@ -8,7 +8,6 @@
 import SwiftUI
 
 enum Tab: String,CaseIterable{
-    case house
     case calendar
     case message
     case person
@@ -17,12 +16,25 @@ enum Tab: String,CaseIterable{
 struct SwiftUIView: View {
     @Binding var selectedTab:Tab
     private var fillImage : String{
+        
         selectedTab.rawValue + ".fill"
+        
     }
     
     var body: some View {
         HStack(alignment: .center, spacing: 12){
+            Button{
+                //
+            }
+        label: {
+            Image(systemName: "house")
+                .foregroundColor(Color(red: 0.39, green: 0.71, blue: 1))
+            Text("Home")
+                .font(Font.custom("Poppins", size: 14))
+        }.padding(12)
+                .background(Color(red: 0.39, green: 0.71, blue: 1).opacity(0.1))
 
+                .cornerRadius(12)
             ForEach(Tab.allCases,id:\.rawValue){tab in
            // Spacer()
                 Image(systemName: selectedTab == tab ? fillImage : tab.rawValue)
@@ -42,5 +54,5 @@ struct SwiftUIView: View {
 }
 
 #Preview {
-    SwiftUIView(selectedTab: .constant(.house))
+    SwiftUIView(selectedTab: .constant(.message))
 }
