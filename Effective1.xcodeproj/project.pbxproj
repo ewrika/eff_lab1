@@ -92,11 +92,12 @@
 		E87F50382B02256C00BFE18B /* Effective1 */ = {
 			isa = PBXGroup;
 			children = (
+				E89FA6B42B094CC900347A38 /* ViewModel */,
+				E89FA6B32B094CC000347A38 /* View */,
+				E89FA6B22B094CB400347A38 /* Model */,
 				E88B86542B0231D600519C05 /* Info.plist */,
 				E88B862D2B022F8D00519C05 /* Fonts */,
 				E87F50392B02256C00BFE18B /* Effective1App.swift */,
-				E87F503B2B02256C00BFE18B /* ContentView.swift */,
-				E87F84832B0680EE00C66597 /* SwiftUIView.swift */,
 				E87F503D2B02256D00BFE18B /* Assets.xcassets */,
 				E87F503F2B02256D00BFE18B /* Preview Content */,
 			);
@@ -135,6 +136,29 @@
 				E88B863C2B022FE200519C05 /* Poppins-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E89FA6B22B094CB400347A38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E89FA6B32B094CC000347A38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E87F84832B0680EE00C66597 /* SwiftUIView.swift */,
+				E87F503B2B02256C00BFE18B /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E89FA6B42B094CC900347A38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

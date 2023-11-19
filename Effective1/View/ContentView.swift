@@ -11,7 +11,6 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var selectedTab:Tab = .message
     
     var body: some View {
         VStack(alignment:.leading) {
@@ -281,62 +280,11 @@ struct ContentView: View {
         
         VStack {
             Divider()
-            HStack{
-                SwiftUIView(selectedTab:$selectedTab)
-            }
-        }
-        /*
-        VStack {
-            Divider()
-            HStack(alignment: .center, spacing: 12){
-                        Button{
-                            //
-                        }
-                    label: {
-                        Image(systemName: "house")
-                            .foregroundColor(Color(red: 0.39, green: 0.71, blue: 1))
-                        Text("Home")
-                            .font(Font.custom("Poppins", size: 14))
-                    }.padding(12)
-                            .background(Color(red: 0.39, green: 0.71, blue: 1).opacity(0.1))
-
-                            .cornerRadius(12)
-                        Spacer()
-                        Button{
-                            //
-                        }
-                    label: {
-                        Image(systemName: "calendar")
-                            .foregroundColor(Color(red: 0.39, green: 0.71, blue: 1))
-
-                    }
-                Spacer()
-
-                        Button{
-                            //
-                        }
-                    label: {
-                        Image(systemName: "message")
-                            .foregroundColor(Color(red: 0.39, green: 0.71, blue: 1))
-
-                    }
-                Spacer()
-
-                        Button{
-                            //
-                        }
-                    label: {
-                        Image(systemName: "person.crop.circle")
-                            .foregroundColor(Color(red: 0.39, green: 0.71, blue: 1))
-
-                    }
-                        
-                    }.padding(.horizontal, 24)
-                        .padding(.vertical, 16)
-                        .frame(width: 375, alignment: .center)
-                    .background(.white)
-        }*/
+                
+                SwiftUIView()
             
+        }.padding(.bottom,8)
+                 
                 }
             }
 

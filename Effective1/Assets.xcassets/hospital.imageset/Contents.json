@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "hospital.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "hospital.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },

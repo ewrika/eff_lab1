@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "iOS Copy.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "iOS Copy.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
